@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
 import hero from "../assets/hero.jpg";
+import { useAuth } from "../context/authContext";
 
 const Hero = () => {
+  const { isAuthenticated } = useAuth();
+
   return (
     <section className="">
       <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
@@ -14,7 +17,10 @@ const Hero = () => {
             with Our Intuitive Chat Application!
           </p>
 
-          <button className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#435BE3] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 ">
+          <Link
+            to="/login"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#435BE3] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 "
+          >
             Login
             <svg
               className="w-5 h-5 ml-2 -mr-1"
@@ -28,7 +34,7 @@ const Hero = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </button>
+          </Link>
 
           {/* <Link
             to="/chathome"
@@ -49,9 +55,12 @@ const Hero = () => {
             </svg>
           </Link> */}
 
-          <button className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg text-black border-gray-700 hover:bg-black focus:ring-white hover:text-white">
+          <Link
+            to="/register"
+            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg text-black border-gray-700 hover:bg-black focus:ring-white hover:text-white"
+          >
             Register
-          </button>
+          </Link>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img src={hero} alt="mockup" className="" />
