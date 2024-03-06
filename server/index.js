@@ -4,9 +4,22 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const userRoute = require("./routes/userRoute");
+const avatarRoute = require("./routes/avatarRoute");
+
 const app = express();
+const createWebSocketServer = require("./wss.js");
 const port = process.env.PORT || 8000;
 
+mongoose.set("strictQuery", false);
+const connectDB = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO_URL);
+    console.log("db connected");
+  } catch (error) {
+    console.log(error);
+  }
+};
+connectDB();
 app.use(express.json());
 app.use(cookieParser());
 const allowedOrigins = ["http://localhost:5173", "http://localhost:7000"];
@@ -27,19 +40,12 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-mongoose.set("strictQuery", false);
-const connectDB = async () => {
-  try {
-    await mongoose.connect(process.env.MONGO_URL);
-    console.log("db connected");
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 app.use(cors(corsOptions));
 app.use("/api/user", userRoute);
+app.use("/api/avatar", avatarRoute);
 
-app.listen(port, () => {
-  connectDB();
+const server = app.listen(port, () => {
+  console.log(`Server Running on Port ${port}`);
 });
+
+createWebSocketServer(server);

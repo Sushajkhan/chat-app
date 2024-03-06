@@ -9,11 +9,15 @@ import {
   ScrollRestoration,
 } from "react-router-dom";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
 import VerifyEmail from "./pages/verifyEmail";
 import { AuthProvider, useAuth } from "./context/authContext";
+import axios from "axios";
 import { useEffect } from "react";
 import { Toaster } from "sonner";
+import Contact from "./pages/ContactMe";
+import Profile from "./components/Profile";
+import Chat from "./pages/Chat";
+import { ProfileProvider } from "./context/profileContext";
 
 const Layout = () => {
   const { isAuthenticated, checkAuth } = useAuth();
@@ -59,25 +63,28 @@ const router = createBrowserRouter([
         path: "users/:id/verify/:token",
         element: <VerifyEmail />,
       },
-      // {
-      //   path: "chathome",
-      //   element: <ChatHome />,
-      // },
-      // {
-      //   path: "profile",
-      //   element: <Profile />,
-      // },
+      {
+        path: "chathome",
+        element: <Chat />,
+      },
+      {
+        path: "profile",
+        element: <Profile />,
+      },
     ],
   },
 ]);
 
 function App() {
+  axios.defaults.withCredentials = true;
   return (
     <>
       <AuthProvider>
-        <RouterProvider router={router} />
+        <ProfileProvider>
+          <RouterProvider router={router} />
+          <Toaster />
+        </ProfileProvider>
       </AuthProvider>
-      <Toaster />
     </>
   );
 }
