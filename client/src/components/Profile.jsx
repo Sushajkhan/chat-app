@@ -3,6 +3,7 @@ import axios from "axios";
 import Nav from "./chat/Nav";
 import { useProfile } from "../context/profileContext";
 import SelectAvatar from "./SelectAvatar";
+import { toast } from "sonner";
 
 const Profile = () => {
   const { userDetails } = useProfile();
@@ -28,7 +29,7 @@ const Profile = () => {
       );
 
       // Handle successful response (you may want to update state or show a success message)
-      // console.log(response.data);
+      toast.success("Profile Updated");
     } catch (error) {
       // Handle error (you may want to show an error message)
       console.error(error);
@@ -39,7 +40,7 @@ const Profile = () => {
   }, [userDetails]);
 
   return (
-    <div className="flex h-full min-h-screen bg-background">
+    <div className="flex h-full min-h-screen bg-white">
       <Nav />
       <div className="bg-background w-[91%] flex items-center">
         <div className="max-w-xl mx-auto ">
@@ -58,7 +59,7 @@ const Profile = () => {
                   name="firstName"
                   id="firstName"
                   className=" border b  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-white border-gray-600 placeholder-gray-400 text-black focus:ring-primary-500 focus:border-primary-500"
-                  value={formData?.firstName}
+                  value={formData?.firstName || ""}
                   placeholder="First Name"
                   onChange={handleChange}
                   required
@@ -76,7 +77,7 @@ const Profile = () => {
                   name="lastName"
                   id="lastName"
                   className=" border b  text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-white border-gray-600 placeholder-gray-400 text-black focus:ring-primary-500 focus:border-primary-500"
-                  value={formData?.lastName}
+                  value={formData?.lastName || ""}
                   placeholder="Last Name"
                   onChange={handleChange}
                   required
@@ -102,6 +103,7 @@ const Profile = () => {
                 />
               </div>
             </div>
+
             <SelectAvatar
               setSelectedLink={setSelectedLink}
               selectedLink={selectedLink}
@@ -109,7 +111,7 @@ const Profile = () => {
             <div className="flex items-center space-x-4">
               <button
                 type="submit"
-                className="text-white bg-black hover:bg-white focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
+                className="text-white bg-black hover:bg-[#435BE3] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-primary-600 hover:bg-primary-700 focus:ring-primary-800"
               >
                 Update Profile
               </button>

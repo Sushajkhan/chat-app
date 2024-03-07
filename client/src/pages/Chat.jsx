@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useProfile } from "../context/profileContext";
 import axios from "axios";
-import ChatMessages from "../components/chat/Chats";
+import ChatMessages from "../components/chat/ChatsMessages";
 import MessageInputForm from "../components/chat/MessageInputForm";
 import Nav from "../components/chat/Nav";
 import OnlineUsersList from "../components/chat/OnlineUsers";

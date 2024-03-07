@@ -20,7 +20,7 @@ export const ProfileProvider = ({ children }) => {
     };
 
     fetchUserDetails();
-  }, [isAuthenticated]);
+  }, [useAuth()]);
 
   return (
     <ProfileContext.Provider value={{ isAuthenticated, userDetails }}>
