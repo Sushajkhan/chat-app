@@ -2,25 +2,23 @@ import logo from "../assets/logo.png";
 const Details = () => {
   return (
     <div className="flex justify-center items-center mt-11">
-      <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
+      <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12  ">
         <img
           src={logo}
           alt=""
-          className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
+          className="w-32 h-32 mx-auto rounded-full  aspect-square"
         />
-        <div className="space-y-4 text-center divide-y dark:divide-gray-700">
+        <div className="space-y-4 text-center divide-y ">
           <div className="my-2 space-y-1">
             <h2 className="text-xl font-semibold sm:text-2xl">Sushajkhan S</h2>
-            <p className="px-5 text-xs sm:text-base dark:text-gray-400">
-              Full-stack developer
-            </p>
+            <p className="px-5 text-xs sm:text-base ">Full-stack developer</p>
           </div>
           <div className="flex justify-center pt-2 space-x-4 align-center">
             <a
               rel="noopener noreferrer"
               href="#"
               aria-label="GitHub"
-              className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400"
+              className="p-2 rounded-md  "
             >
               <svg
                 viewBox="0 0 496 512"
@@ -34,7 +32,7 @@ const Details = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="linkedin"
-              className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400"
+              className="p-2 rounded-md "
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +49,7 @@ const Details = () => {
               rel="noopener noreferrer"
               href="#"
               aria-label="Email"
-              className="p-2 rounded-md dark:text-gray-100 hover:dark:text-violet-400"
+              className="p-2 rounded-md "
             >
               <svg
                 viewBox="0 0 512 512"

@@ -2,14 +2,14 @@ const Features = () => {
   return (
     <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <div className="container px-6 py-5 mx-auto">
-        <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+        <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-3xl ">
           explore our <br /> awesome{" "}
           <span className="text-[#435BE3]">Components</span>
         </h1>
 
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full  ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -26,11 +26,11 @@ const Features = () => {
               </svg>
             </span>
 
-            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
+            <h1 className="text-xl font-semibold text-gray-700 capitalize ">
               Copy & paste components
             </h1>
 
-            <p className="text-gray-500 dark:text-gray-300">
+            <p className="text-gray-500 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               ab nulla quod dignissimos vel non corrupti doloribus voluptatum
               eveniet
@@ -38,7 +38,7 @@ const Features = () => {
 
             <a
               href="#"
-              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
+              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform  hover:underline hover:text-blue-600 "
             >
               <span className="mx-1">read more</span>
               <svg
@@ -56,8 +56,8 @@ const Features = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -74,11 +74,11 @@ const Features = () => {
               </svg>
             </span>
 
-            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
+            <h1 className="text-xl font-semibold text-gray-700 capitalize ">
               Zero Configuration
             </h1>
 
-            <p className="text-gray-500 dark:text-gray-300">
+            <p className="text-gray-500 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               ab nulla quod dignissimos vel non corrupti doloribus voluptatum
               eveniet
@@ -86,7 +86,7 @@ const Features = () => {
 
             <a
               href="#"
-              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
+              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform  hover:underline hover:text-blue-600 "
             >
               <span className="mx-1">read more</span>
               <svg
@@ -104,8 +104,8 @@ const Features = () => {
             </a>
           </div>
 
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
-            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full dark:text-white dark:bg-blue-500">
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-[#435BE3] bg-blue-100 rounded-full ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
@@ -122,11 +122,11 @@ const Features = () => {
               </svg>
             </span>
 
-            <h1 className="text-xl font-semibold text-gray-700 capitalize dark:text-white">
+            <h1 className="text-xl font-semibold text-gray-700 capitalize ">
               Simple & clean designs
             </h1>
 
-            <p className="text-gray-500 dark:text-gray-300">
+            <p className="text-gray-500 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
               ab nulla quod dignissimos vel non corrupti doloribus voluptatum
               eveniet
@@ -134,7 +134,7 @@ const Features = () => {
 
             <a
               href="#"
-              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform dark:text-blue-400 hover:underline hover:text-blue-600 dark:hover:text-blue-500"
+              className="flex items-center -mx-1 text-sm text-[#435BE3] capitalize transition-colors duration-300 transform  hover:underline hover:text-blue-600 "
             >
               <span className="mx-1">read more</span>
               <svg

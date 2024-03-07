@@ -1,6 +1,6 @@
 const ContactForm = () => {
   return (
-    <section className="mt-12 py-6 dark:bg-gray-800 dark:text-gray-50">
+    <section className="mt-12 py-6 ">
       <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
         <div className="py-6 md:py-0 md:px-6">
           <h1 className="text-4xl font-bold">Get in touch</h1>
@@ -52,7 +52,7 @@ const ContactForm = () => {
             <input
               type="text"
               placeholder="your name"
-              className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800"
+              className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri "
             />
           </label>
           <label className="block">
@@ -60,19 +60,19 @@ const ContactForm = () => {
             <input
               type="email"
               placeholder="email@example.com"
-              className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri dark:bg-gray-800"
+              className="block w-full rounded-md shadow-sm focus:ring focus:ri focus:ri "
             />
           </label>
           <label className="block">
             <span className="mb-1">Message</span>
             <textarea
               rows="3"
-              className="block w-full rounded-md focus:ring focus:ri focus:ri dark:bg-gray-800"
+              className="block w-full rounded-md focus:ring focus:ri focus:ri "
             ></textarea>
           </label>
           <button
             type="button"
-            className="self-center px-6 py-2 text-lg text-white bg-black rounded-xl focus:ring hover:ring focus:ri dark:bg-violet-400 dark:text-gray-900 focus:ri hover:ri"
+            className="self-center px-6 py-2 text-lg text-white bg-black rounded-xl focus:ring hover:ring focus:ri   focus:ri hover:ri"
           >
             Submit
           </button>

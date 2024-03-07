@@ -3,24 +3,22 @@ const Pricing = () => {
     <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <div className="container px-4 mx-auto ">
         <div className="max-w-2xl mx-auto mb-16 text-center">
-          <span className="font-bold tracki uppercase dark:text-violet-400">
-            Pricing
-          </span>
+          <span className="font-bold tracki uppercase ">Pricing</span>
           <h2 className="text-4xl font-bold lg:text-5xl">
             Choose your best plan
           </h2>
         </div>
         <div className="flex flex-wrap items-stretch -mx-4 ">
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0   ">
-            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 ">
+            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 ">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Beginner</h4>
                 <span className="text-6xl font-bold">Free</span>
               </div>
-              <p className="mt-3 leadi dark:text-gray-400">
+              <p className="mt-3 leadi ">
                 Etiam ac convallis enim, eget euismod dolor.
               </p>
-              <ul className="flex-1 mb-6 dark:text-gray-400">
+              <ul className="flex-1 mb-6 ">
                 <li className="flex mb-2 space-x-2 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +39,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -56,7 +54,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -76,7 +74,7 @@ const Pricing = () => {
             </div>
           </div>
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-violet-400 dark:text-gray-900">
+            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 ">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Pro</h4>
                 <span className="text-6xl font-bold">
@@ -159,7 +157,7 @@ const Pricing = () => {
             </div>
           </div>
           <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
+            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 ">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Team</h4>
                 <span className="text-6xl font-bold">
@@ -167,16 +165,16 @@ const Pricing = () => {
                   <span className="text-sm tracki">/month</span>
                 </span>
               </div>
-              <p className="leadi dark:text-gray-400">
+              <p className="leadi ">
                 Phasellus ultrices bibendum nibh in vehicula.
               </p>
-              <ul className="space-y-2 dark:text-gray-400">
+              <ul className="space-y-2 ">
                 <li className="flex items-start space-x-2">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -191,7 +189,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -206,7 +204,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -221,7 +219,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
@@ -236,7 +234,7 @@ const Pricing = () => {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="flex-shrink-0 w-6 h-6 dark:text-violet-400"
+                    className="flex-shrink-0 w-6 h-6 "
                   >
                     <path
                       fillRule="evenodd"
