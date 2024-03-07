@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const userRoute = require("./routes/userRoute");
 const avatarRoute = require("./routes/avatarRoute");
+const path = require("path");
 
 const app = express();
 const createWebSocketServer = require("./wss.js");
@@ -40,10 +41,6 @@ const corsOptions = {
   credentials: true,
 };
 
-app.get("/", (req, res) => {
-  res.send("hi");
-});
-
 app.use(cors(corsOptions));
 app.use("/api/user", userRoute);
 app.use("/api/avatar", avatarRoute);
@@ -53,3 +50,12 @@ const server = app.listen(port, () => {
 });
 
 createWebSocketServer(server);
+app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
+
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist/index.html"), (err) => {
+    if (err) {
+      console.error("Error sending file:", err);
+    }
+  });
+});
