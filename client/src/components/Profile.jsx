@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "./chat/Nav";
 import { useProfile } from "../context/profileContext";
-import SelectAvatar from "./SelectAvatar";
 import { toast } from "sonner";
+import SelectAvatar from "./SelectAvatar";
 
 const Profile = () => {
   const { userDetails } = useProfile();

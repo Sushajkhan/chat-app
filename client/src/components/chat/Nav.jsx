@@ -16,17 +16,17 @@ const Nav = () => {
     <>
       <button
         onClick={() => setIsMobile(!isMobile)}
-        className="flex fixed bottom-5 h-10 aspect-square lg:hidden justify-center items-center bg-dark left-5 z-50 ring-2 ring-gray-500 rounded-lg text-black"
+        className="flex fixed bottom-5 h-10 aspect-square lg:hidden justify-center items-center bg-dark left-5 z-50 ring-2 ring-gray-500 rounded-lg text-black bg-"
       >
         <img src={logo} alt="logo" />
       </button>
       {isMobile && (
-        <header className="fixed h-screen w-[150px] z-40 lg:static lg:w-[9%] text-black bg-dark flex flex-col px-3 py-4">
+        <header className="fixed h-screen w-[150px] z-40 lg:static lg:w-[9%] text-black bg-dark flex flex-col px-3 py-4 border-r border-gray-700">
           <Link
             to="/"
             className="flex gap-2 items-center justify-center border-b pb-2 mb-4 border-gray-600"
           >
-            <img src={logo} className="h-8" alt="Swift Logo" />
+            <img src={logo} className="h-8" alt="Dot Logo" />
             <span className="font-semibold text-xl mr-2">Dot</span>
           </Link>
           <nav className="h-full flex flex-col my-4 justify-between font-medium pl-2">
@@ -66,23 +66,26 @@ const Nav = () => {
                 <span>Chats</span>
               </Link>
             </div>
-            <Link className="flex items-end gap-1 mb-14">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"
-                />
-              </svg>
-              <button onClick={logout}>Logout</button>
-            </Link>
+
+            <button onClick={logout} className="bg-black text-white rounded-md">
+              <Link className="flex items-end gap-1  px-2 py-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15"
+                  />
+                </svg>
+                Logout
+              </Link>
+            </button>
           </nav>
         </header>
       )}

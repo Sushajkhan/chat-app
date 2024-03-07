@@ -3,13 +3,10 @@ const { User } = require("../models/User");
 
 const profileController = async (req, res) => {
   const token = req.cookies?.authToken;
-  // console.log(token);
   if (token) {
     jwt.verify(token, process.env.JWTPRIVATEKEY, {}, async (err, userData) => {
       console.log(userData);
       if (err) throw err;
-      // res.json(userData);
-      // console.log(userData);
       const user = await User.findOne({ _id: userData._id });
       res.json(user);
     });

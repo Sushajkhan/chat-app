@@ -33,7 +33,7 @@ const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
             onClick={() => setSelectedLink(avatar.link)}
             alt={`Avatar ${avatar._id}`}
             style={{ width: "90px", height: "90px", margin: "5px" }}
-            className={`rounded-full cursor-pointer  p-2 bg-primarySecond hover:outline outline-black ${
+            className={`rounded-full cursor-pointer  p-2 bg-primarySecond hover:outline outline-white ${
               selectedLink === avatar.link ? "outline" : ""
             }`}
           />

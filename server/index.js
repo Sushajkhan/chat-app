@@ -33,7 +33,7 @@ const corsOptions = {
   },
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   optionsSuccessStatus: 204,
-  credentials: true, // Allow credentials like cookies
+  credentials: true,
 };
 
 app.get("/", (req, res) => {
