@@ -44,7 +44,7 @@ app.get("/", (req, res) => {
   res.send("hi");
 });
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use("/api/user", userRoute);
 app.use("/api/avatar", avatarRoute);
 
