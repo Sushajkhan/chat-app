@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:7000/api/user/register";
+      const url = "/api/user/register";
       const { data: res } = await axios.post(url, credentials);
       toast.success(res.message);
     } catch (err) {

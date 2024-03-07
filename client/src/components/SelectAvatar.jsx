@@ -9,7 +9,7 @@ const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
     const fetchAvatars = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:7000/api/avatar/all"
+          "/api/avatar/all"
         );
         console.log(response.data.avatars);
         setAvatars(response.data.avatars);

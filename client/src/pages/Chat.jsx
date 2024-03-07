@@ -8,7 +8,7 @@ import OnlineUsersList from "../components/chat/OnlineUsers";
 import TopBar from "../components/chat/TopBar";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
-
+let socketUrl = import.meta.env.SOCKET_URL;
 const Chat = () => {
   const [ws, setWs] = useState(null);
   const [onlinePeople, setOnlinePeople] = useState({});
@@ -20,7 +20,7 @@ const Chat = () => {
   const { isAuthenticated, checkAuth } = useAuth();
   const navigate = useNavigate();
   const connectToWebSocket = () => {
-    const ws = new WebSocket("ws://localhost:7000");
+    const ws = new WebSocket(socketUrl);
     ws.addEventListener("message", handleMessage);
     setWs(ws);
   };
@@ -35,9 +35,7 @@ const Chat = () => {
     const fetchData = async () => {
       if (selectedUserId) {
         try {
-          const res = await axios.get(
-            `http://localhost:7000/api/user/messages/${selectedUserId}`
-          );
+          const res = await axios.get(`/api/user/messages/${selectedUserId}`);
           setMessages(res.data);
         } catch (error) {
           console.error("Error fetching messages:", error);
@@ -49,7 +47,7 @@ const Chat = () => {
   }, [selectedUserId]);
 
   useEffect(() => {
-    axios.get("http://localhost:7000/api/user/people").then((res) => {
+    axios.get("/api/user/people").then((res) => {
       // console.log(res.data);
       const offlinePeopleArr = res?.data
         .filter((p) => p._id !== userDetails?._id)
@@ -137,9 +135,7 @@ const Chat = () => {
     const fetchData = async () => {
       if (selectedUserId) {
         try {
-          const res = await axios.get(
-            `http://localhost:7000/api/user/messages/${selectedUserId}`
-          );
+          const res = await axios.get(`/api/user/messages/${selectedUserId}`);
           setMessages(res.data);
         } catch (error) {
           console.error("Error fetching messages:", error);

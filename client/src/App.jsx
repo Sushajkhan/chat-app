@@ -76,6 +76,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  let baseUrl = import.meta.env.BASE_URL;
+  axios.defaults.baseURL = baseUrl;
   axios.defaults.withCredentials = true;
   return (
     <>

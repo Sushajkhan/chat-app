@@ -20,13 +20,10 @@ const Profile = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put(
-        "http://localhost:7000/api/user/profile/update",
-        {
-          ...formData,
-          avatarLink: selectedLink,
-        }
-      );
+      const response = await axios.put("/api/user/profile/update", {
+        ...formData,
+        avatarLink: selectedLink,
+      });
 
       // Handle successful response (you may want to update state or show a success message)
       toast.success("Profile Updated");

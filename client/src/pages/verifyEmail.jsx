@@ -20,9 +20,7 @@ const VerifyEmail = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(
-          `http://localhost:7000/api/user/${id}/verify/${token}`
-        );
+        const response = await axios.get(`/api/user/${id}/verify/${token}`);
 
         toast.success(response.data.message);
       } catch (error) {
