@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
 import logo from "../assets/logo.png";
+import { BASE_URL } from "../utils/apiConfig";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
@@ -27,7 +28,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "/api/user/login";
+      const url = `${BASE_URL}/api/user/login`;
       const response = await axios.post(url, credentials, {
         withCredentials: true, // Set withCredentials to true
       });

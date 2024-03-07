@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "sonner";
 import logo from "../assets/logo.png";
+import { BASE_URL } from "../utils/apiConfig";
 
 const Register = () => {
   const [credentials, setCredentials] = useState({
@@ -19,7 +20,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "/api/user/register";
+      const url = `${BASE_URL}/api/user/register`;
       const { data: res } = await axios.post(url, credentials);
       toast.success(res.message);
     } catch (err) {

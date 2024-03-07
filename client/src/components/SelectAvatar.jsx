@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { toast } from "sonner";
+import { BASE_URL } from "../utils/apiConfig";
 
 const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
   // console.log(selectedLink)
@@ -8,9 +9,7 @@ const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
   useEffect(() => {
     const fetchAvatars = async () => {
       try {
-        const response = await axios.get(
-          "/api/avatar/all"
-        );
+        const response = await axios.get(`${BASE_URL}/api/avatar/all`);
         console.log(response.data.avatars);
         setAvatars(response.data.avatars);
       } catch (error) {

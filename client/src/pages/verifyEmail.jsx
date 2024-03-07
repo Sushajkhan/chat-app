@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
+import { BASE_URL } from "../utils/apiConfig";
 
 const VerifyEmail = () => {
   const { id, token } = useParams();
@@ -20,7 +21,9 @@ const VerifyEmail = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`/api/user/${id}/verify/${token}`);
+        const response = await axios.get(
+          `${BASE_URL}/api/user/${id}/verify/${token}`
+        );
 
         toast.success(response.data.message);
       } catch (error) {

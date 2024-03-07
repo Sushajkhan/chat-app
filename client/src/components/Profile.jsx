@@ -4,6 +4,7 @@ import Nav from "./chat/Nav";
 import { useProfile } from "../context/profileContext";
 import { toast } from "sonner";
 import SelectAvatar from "./SelectAvatar";
+import { BASE_URL } from "../utils/apiConfig";
 
 const Profile = () => {
   const { userDetails } = useProfile();
@@ -20,7 +21,7 @@ const Profile = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.put("/api/user/profile/update", {
+      const response = await axios.put(`${BASE_URL}/api/user/profile/update`, {
         ...formData,
         avatarLink: selectedLink,
       });
