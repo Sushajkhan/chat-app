@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <section className="bg-white dark:bg-gray-900 ">
+    <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <div className="container px-6 py-5 mx-auto">
         <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
           explore our <br /> awesome{" "}

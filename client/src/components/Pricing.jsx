@@ -1,9 +1,7 @@
-import React from "react";
-
 const Pricing = () => {
   return (
-    <section className="py-20 dark:bg-gray-800 dark:text-gray-100">
-      <div className="container px-4 mx-auto">
+    <section className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="container px-4 mx-auto ">
         <div className="max-w-2xl mx-auto mb-16 text-center">
           <span className="font-bold tracki uppercase dark:text-violet-400">
             Pricing
@@ -12,9 +10,9 @@ const Pricing = () => {
             Choose your best plan
           </h2>
         </div>
-        <div className="flex flex-wrap items-stretch -mx-4">
-          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
-            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900">
+        <div className="flex flex-wrap items-stretch -mx-4 ">
+          <div className="flex w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0   ">
+            <div className="flex flex-grow flex-col p-6 space-y-6 rounded shadow sm:p-8 dark:bg-gray-900 ">
               <div className="space-y-2">
                 <h4 className="text-2xl font-bold">Beginner</h4>
                 <span className="text-6xl font-bold">Free</span>
@@ -23,7 +21,7 @@ const Pricing = () => {
                 Etiam ac convallis enim, eget euismod dolor.
               </p>
               <ul className="flex-1 mb-6 dark:text-gray-400">
-                <li className="flex mb-2 space-x-2">
+                <li className="flex mb-2 space-x-2 ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
@@ -71,7 +69,7 @@ const Pricing = () => {
               </ul>
               <button
                 type="button"
-                className="inline-block px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900"
+                className="inline-block px-5 py-3 font-semibold tracki text-center rounded-md bg-black text-white"
               >
                 Get Started
               </button>
@@ -154,7 +152,7 @@ const Pricing = () => {
               <a
                 rel="noopener noreferrer"
                 href="#"
-                className="inline-block w-full px-5 py-3 font-bold tracki text-center rounded dark:bg-gray-800 dark:text-violet-400"
+                className="inline-block w-full px-5 py-3 font-bold tracki text-center rounded-md bg-black text-white"
               >
                 Get Started
               </a>
@@ -252,7 +250,7 @@ const Pricing = () => {
               <a
                 rel="noopener noreferrer"
                 href="#"
-                className="inline-block w-full px-5 py-3 font-semibold tracki text-center rounded dark:bg-violet-400 dark:text-gray-900"
+                className="inline-block w-full px-3 py-2 font-semibold tracki text-center rounded-md bg-black text-white "
               >
                 Get Started
               </a>

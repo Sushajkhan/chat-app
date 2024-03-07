@@ -17,50 +17,54 @@ const Hero = () => {
             with Our Intuitive Chat Application!
           </p>
 
-          <Link
-            to="/login"
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#435BE3] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 "
-          >
-            Login
-            <svg
-              className="w-5 h-5 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+          {!isAuthenticated && (
+            <Link
+              to={"/login"}
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#435BE3] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 "
             >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </Link>
-
-          {/* <Link
-            to="/chathome"
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#1B57E9] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 "
-          >
-            Chat Home
-            <svg
-              className="w-5 h-5 ml-2 -mr-1"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              Login
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+          )}
+          {isAuthenticated && (
+            <Link
+              to={"/chathome"}
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-[#435BE3] hover:bg-blue-800 focus:ring-4 focus:ring-primary-300 "
             >
-              <path
-                fillRule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clipRule="evenodd"
-              ></path>
-            </svg>
-          </Link> */}
-
-          <Link
-            to="/register"
-            className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg text-black border-gray-700 hover:bg-black focus:ring-white hover:text-white"
-          >
-            Register
-          </Link>
+              Chat Home
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clipRule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+          )}
+          {!isAuthenticated && (
+            <Link
+              to={"/register"}
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center border rounded-lg text-black border-gray-700 hover:bg-black focus:ring-white hover:text-white"
+            >
+              Register
+            </Link>
+          )}
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
           <img src={hero} alt="mockup" className="" />

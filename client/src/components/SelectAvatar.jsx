@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "sonner";
 
 const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
   // console.log(selectedLink)
@@ -30,7 +31,10 @@ const SelectAvatar = ({ setSelectedLink, selectedLink }) => {
           <img
             key={avatar._id}
             src={avatar.link}
-            onClick={() => setSelectedLink(avatar.link)}
+            onClick={() => {
+              setSelectedLink(avatar.link);
+              toast.success("Avatar Selected");
+            }}
             alt={`Avatar ${avatar._id}`}
             style={{ width: "90px", height: "90px", margin: "5px" }}
             className={`rounded-full cursor-pointer  p-2 bg-primarySecond hover:outline outline-white ${
