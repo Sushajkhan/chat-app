@@ -5,12 +5,13 @@ const cookieParser = require("cookie-parser");
 require("dotenv").config();
 const userRoute = require("./routes/userRoute");
 const avatarRoute = require("./routes/avatarRoute");
-const path = require("path");
 
 const app = express();
 const createWebSocketServer = require("./wss.js");
 const port = process.env.PORT || 8000;
-
+app.get("/", (req, res) => {
+  res.send("TaDa...");
+});
 mongoose.set("strictQuery", false);
 const connectDB = async () => {
   try {
@@ -50,6 +51,3 @@ const server = app.listen(port, () => {
 });
 
 createWebSocketServer(server);
-app.get("/", (req, res) => {
-  res.send("TaDa...");
-});
